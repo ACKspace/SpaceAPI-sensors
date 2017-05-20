@@ -9,27 +9,22 @@
 //#include "iostream";
 #endif
 
-#include "Sensor.h"
-
-
-uint8_t Sensor::getCount( )
-{
-    return 1;
-};
-
+#include "Output.h"
 
 
 ////////////////////////////////////////////////////////////////////////////////
-// Sensor::Sensor
+// Output::Output
 ////////////////////////////////////////////////////////////////////////////////
-Sensor::Sensor( const uint8_t _arrPins[], const uint8_t _nPinCount, const uint8_t _nInterval )
+Output::Output( const uint8_t _arrPins[], const uint8_t _nPinCount )
 {
-    // TODO: pincount, pins, interval
+  // TODO: pincount, pins, interval
+    // Store the data locally
+    //this->m_arrQueries  = _arrQueries;
 };
 
-/*Sensor::~Sensor( )
+/*
+Sensor::~Sensor( )
 {
     //delete [] this->m_arrPathMatches;
 };
 */
-
