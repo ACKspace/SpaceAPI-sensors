@@ -35,12 +35,12 @@ bool PinOut::setCount( uint8_t _nSensor )
     return _nSensor == 1 ? true : false;
 };
 
-bool PinOut::setId( String _strId, uint8_t _nSensor = 0 )
+bool PinOut::setId( String _strId, uint8_t _nSensor/* = 0 */)
 {
     return _nSensor == 1 ? true : false;
 };
 
-bool PinOut::setValue( int16_t _nValue, uint8_t _nSensor = 0 )
+bool PinOut::setValue( int16_t _nValue, uint8_t _nSensor/* = 0 */)
 {
     if ( _nSensor > 0 )
     {
@@ -54,7 +54,7 @@ bool PinOut::setValue( int16_t _nValue, uint8_t _nSensor = 0 )
     return true;
 };
 
-bool PinOut::setFactor( int16_t _nFactor, uint8_t _nSensor = 0 )
+bool PinOut::setFactor( int16_t _nFactor, uint8_t _nSensor/* = 0 */)
 {
     // TODO: take factor into account
     if ( _nSensor > 0 )
@@ -63,12 +63,12 @@ bool PinOut::setFactor( int16_t _nFactor, uint8_t _nSensor = 0 )
     return true;
 };
 
-bool PinOut::setInterval( uint16_t _nInterval, uint8_t _nSensor = 0 )
+bool PinOut::setInterval( uint16_t _nInterval, uint8_t _nSensor/* = 0 */)
 {
     return _nSensor == 1 ? true : false;
 };
 
-bool PinOut::setUnit( Unit::Enum _eUnit, uint8_t _nSensor = 0 )
+bool PinOut::setUnit( Unit::Enum _eUnit, uint8_t _nSensor/* = 0 */)
 {
     if ( _nSensor > 0 )
         return false;
@@ -80,12 +80,12 @@ bool PinOut::setUnit( Unit::Enum _eUnit, uint8_t _nSensor = 0 )
 
         // TODO: determine threshold (direction)
         // Certain outputs can have multiple states (thresholds); the main app will set a threshold value per output
-uint8_t PinOut::getThresholdCount( uint8_t _nSensor = 0 )
+uint8_t PinOut::getThresholdCount( uint8_t _nSensor/* = 0 */)
 {
     return this->m_nThreshold;
 };
 
-bool PinOut::setThreshold( uint8_t _nThreshold, int16_t _nThresholdValue, uint8_t _nSensor = 0 )
+bool PinOut::setThreshold( uint8_t _nThreshold, int16_t _nThresholdValue, uint8_t _nSensor/* = 0 */)
 {
 
     if ( _nThreshold > 0 )
